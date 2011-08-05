@@ -75,45 +75,31 @@
 			$j('.isotopeItem.highlight').siblings().fadeTo('fast', 1);
 			$j(this).removeClass('highlight');
 		});
-
-	var portfolioFilters = $j('#portfolioFilters');
-	$j('li#navPortfolio').mouseenter(
+		
+	$j('nav #topFilters').hover( 
 		function () {
-			portfolioFilters.slideDown('400');
+			$j('.selected').addClass('selectedReturn');
+			$j('.selected').removeClass('selected');			
+		},
+		function () {
+			$j('.selectedReturn').addClass('selected');
+			$j('.selected').removeClass('selectedReturn');
 		});
-	$j('li#navPortfolio').siblings().mouseenter(
+	$j('nav #portfolioFilters a').hover( 
 		function () {
-			portfolioFilters.slideUp('400');
-			if( $j('li#navPortfolio > a').hasClass('selected') ) { 
-				$j('li#navPortfolio > a').removeClass('selected') }
-		});
-	$j('#topFilters').mouseleave(
+			$j('nav #portfolioFilters a.selected').addClass('selectedReturn');
+			$j('nav #portfolioFilters a.selected').removeClass('selected');			
+		},
 		function () {
-			$j('#portfolioFilters li a').each(function (index, element) {
-				if($j(element).hasClass('selected')) {
-					$j('li#navPortfolio > a').addClass('selected')		
-					portfolioFilters.slideDown('400');
-				}
-			})
-		});
-	$j('#navPortfolio a').click(
+			$j('nav #portfolioFilters a.selectedReturn').addClass('selected');
+			$j('nav #portfolioFilters a.selected').removeClass('selectedReturn');
+	});
+	$j('nav#filters a').hover(
 		function () {
-			$j('ul#portfolioFilters > li:first-child a').addClass('selected');
-		});
-	$j('li#navPortfolio').siblings().click(
+			this.addClass('selected');
+		},
 		function () {
-			$j('li#navPortfolio').removeClass('selected');
-			$j(this).addClass('selected');
-		});
-	$j('ul#portfolioFilters > li a').click(
-		function () {
-			if( !$j('li#navPortfolio > a').hasClass('selected') ) { 
-				$j('li#navPortfolio > a').addClass('selected') }
-			});
-	portfolioFilters.mouseenter(
-		function () {
-			if( !$j('li#navPortfolio > a').hasClass('selected') ) { 
-				$j('li#navPortfolio > a').addClass('selected') }
+			this.removeClass('selected');
 		});
 });
 
