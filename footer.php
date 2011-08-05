@@ -35,6 +35,7 @@
       var optionSets = $j('.option-set'),
           optionLinks = optionSets.find('a');
 
+
       optionLinks.click(function(){
         var thisLink = $j(this);
         // don't proceed if already selected
@@ -43,6 +44,7 @@
         }
         var optionSet = thisLink.parents('.option-set');
         optionSet.find('.selected').removeClass('selected');
+		optionSet.find('.selectedReturn').removeClass('selectedReturn');
         thisLink.addClass('selected');
   
         // make option object dynamically, i.e. { filter: '.my-filter-class' }
@@ -58,12 +60,7 @@
         } else {
           // otherwise, apply new options
           container.isotope( options );
-        }
-        
-		if ( $j('li#portfolioFilters > li a').hasClass('selected') ) {
-			$j('li#navPortfolio > a').addClass('selected');
-		}
-		
+        }		
         return false;
       });
 	$j('.isotopeItem').hoverIntent(
@@ -101,6 +98,9 @@
 		function () {
 			this.removeClass('selected');
 		});
+	$j('nav #portfolioFilters a').click(function(){
+		$j('nav #navPortfolio a').addClass('selected');
+	});
 });
 
 </script>

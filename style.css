@@ -759,7 +759,7 @@ body {
 
 #wrapper {
 	background: url(images/light.png) top center no-repeat, url(images/seamlesspaperfaux.jpg) repeat-y 13% 0%;
-	padding-top: 40px;
+	padding-top: 20px;
 }
 
 #skyline {
@@ -784,7 +784,7 @@ body {
 # 
 ----------------------------------------*/
 #header {
-	height: 300px;
+	min-height: 100px;
 }
 #header a:link, header a:visited {
 	text-transform:lowercase;
