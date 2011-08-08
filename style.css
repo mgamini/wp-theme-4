@@ -739,7 +739,7 @@ body {
 }
 
 #leftBack {
-	width: 25%;
+	width: 50%;
 	height: 120%;
 	background: url(images/seamlesspapergrey.jpg) repeat;
 	position: fixed;
@@ -757,9 +757,13 @@ body {
 }
 
 
-#wrapper {
-	background: url(images/light.png) top center no-repeat, url(images/seamlesspaperfaux.jpg) repeat-y 13% 0%;
-	padding-top: 20px;
+#glow {
+	background: url(images/light.png) top center no-repeat;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 4;
 }
 
 #skyline {
@@ -770,6 +774,14 @@ body {
 
 #rightContent {
 	z-index: 4;
+	padding:20px 0px 0px 1.4%;
+	background: url(images/seamlesspaperblue.jpg) repeat;
+}
+#leftContent {
+	padding: 20px 2.3% 0px 0px;
+}
+#main {
+	z-index: 5;
 }
 
 /*----------------------------------------

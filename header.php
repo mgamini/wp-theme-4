@@ -25,7 +25,7 @@
 <div id="rightBack">
 <div id="wrapper" class="hfeed container">
 <div id="container" class="row">
-<div id="leftContent" class="twocol">
+<div id="leftContent" class="twocol last">
   <?php get_sidebar(); ?>
 </div>
 <div id="rightContent" class="tencol last">
