@@ -37,13 +37,13 @@
     <nav id="filters" class="option-set clearfix" data-option-key="filter">
       <ul id="topFilters">
       	<li id="navPortfolio"><a href="#" data-option-value=":not(.category-blog)" class="selected">Portfolio</a></li>
-        <li><a href="#filter" data-option-value=".category-blog">blog</a></li>
+        <li><a href="~/#blog" data-option-value=".category-blog">blog</a></li>
         <li><a href="#">contact</a></li>
       </ul>
       <ul id="portfolioFilters">
         <li><a href="#filter" data-option-value=":not(.category-blog)" class="selected">show all</a></li>
-        <li><a href="#filter" data-option-value=".category-ui">ui</a></li>
-        <li><a href="#filter" data-option-value=".category-ux">ux</a></li>
+        <li><a href="#ui" data-option-value=".category-ui">ui</a></li>
+        <li><a href="#ux" data-option-value=".category-ux">ux</a></li>
       </ul>
     </nav>
     <!--<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>--> 
