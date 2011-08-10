@@ -62,6 +62,9 @@ endif;
 wp_register_script('jquery', get_template_directory_uri() . 'http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js', array() );
 if( !is_admin() ){ wp_enqueue_script('jquery'); }
 
+wp_register_script('lightbox', get_template_directory_uri() . '/js/jquery.lightbox-0.5.min.js', array() );
+if( !is_admin() ){ wp_enqueue_script('lightbox'); }
+
 wp_register_script('hoverintent', get_template_directory_uri() . '/js/jquery.hoverIntent.minified.js', array() );
 if( !is_admin() ){ wp_enqueue_script('hoverintent'); }
 

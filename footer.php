@@ -1,18 +1,11 @@
 			</div><!-- #container -->
 			<footer id="footer" role="contentinfo" class="row">
-				<div id="footerbar" class="twelvecol last">
+            	<div class="leftContent twocol last"></div> 
+				<div id="footerbar" class="tencol last">
 					<?php get_sidebar( 'footer' ); ?>
-				</div><!-- #footerbar -->
-				<div id="colophon" class="twelvecol last">
-					<div id="site-info" class="sixcol">
 						<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 							<?php bloginfo( 'name' ); ?>
 						</a>
-					</div><!-- #site-info -->
-					<div id="site-generator" class="sixcol last">
-						<?php do_action( 'brunelleschi_credits' ); ?>
-						<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'brunelleschi' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'brunelleschi' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s.', 'brunelleschi' ), 'WordPress' ); ?></a>
-					</div><!-- #site-generator -->
 				</div><!-- #colophon -->
 			</footer><!-- #footer -->
         <div id="skyline">
@@ -100,6 +93,24 @@
 		});
 	$j('nav #portfolioFilters a').click(function(){
 		$j('nav #navPortfolio a').addClass('selected');
+	});
+	$j('#nav-above .nav-previous a').hover(function() {
+			$j('#nav-above .nav-previous .meta-nav').fadeIn('fast');
+		},
+		function(){
+			$j('#nav-above .nav-previous .meta-nav').fadeOut('fast');
+	});
+	$j('#nav-above .nav-next a').hover(function() {
+			$j('#nav-above .nav-next .meta-nav').fadeIn('fast');
+		},
+		function(){
+			$j('#nav-above .nav-next .meta-nav').fadeOut('fast');
+	});
+	$j('#entry-gallery a').lightBox({
+	imageLoading: '<?php bloginfo( 'template_url' ); ?>/images/lightbox-btn-loading.gif',
+	imageBtnClose: '<?php bloginfo( 'template_url' ); ?>/images/lightbox-btn-close.gif',
+	imageBtnPrev: '<?php bloginfo( 'template_url' ); ?>/images/lightbox-btn-prev.gif',
+	imageBtnNext: '<?php bloginfo( 'template_url' ); ?>/images/lightbox-btn-next.gif'	
 	});
 });
 

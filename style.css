@@ -277,7 +277,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 .container {
 padding-left: 20px;
-padding-right: 20px;
+
 }
 
 .row {
@@ -330,7 +330,7 @@ width: 74.05%;
 }
 
 .row .tencol {
-width: 82.7%;
+width: 80.7%;
 }
 
 .row .elevencol {
@@ -709,15 +709,7 @@ sup {
 sub {
 	top: .5ex;
 }
-input[type="text"],
-textarea {
-	background: #f9f9f9;
-	border: 1px solid #ccc;
-	box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
-	-moz-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
-	-webkit-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
-	padding: 2px;
-}
+
 a:link {
 	color: #425960;
 }
@@ -757,27 +749,21 @@ body {
 }
 
 
-#glow {
-	background: url(images/light.png) top center no-repeat;
-	position: absolute;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 4;
-}
+
 
 #skyline {
-	position: fixed;
+	position: absolute;
 	left: 20px;
 	bottom: 0px;
+	z-index: 1;
 }
 
 #rightContent {
 	z-index: 4;
-	padding:20px 0px 0px 1.4%;
-	background: url(images/seamlesspaperblue.jpg) repeat;
+	padding:20px 20px 0px 1.4%;
+	background: url(images/light.png) top left no-repeat, url(images/seamlesspaperblue.jpg) repeat;
 }
-#leftContent {
+.leftContent {
 	padding: 20px 2.3% 0px 0px;
 }
 #main {
@@ -789,14 +775,35 @@ body {
 # HEADER
 # 
 ----------------------------------------*/
-
-/*----------------------------------------
-# 
-# NAVIGATION
-# 
-----------------------------------------*/
+.leftContent img:first-child {
+	margin-bottom: 20px;
+}
+#sidebar input[type="text"], #sidebar textarea {
+	background: rgba(255,255,255,0.1);
+	border: 2px solid #6d8e99;
+	box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+	-moz-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+	-webkit-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+	padding: 2px;
+	border-radius: 5px;
+	width: 75%;
+	min-width: 50px;
+}
+#sidebar #searchsubmit {
+	background: url(images/magnifying-glass.png) no-repeat;
+	border:	none;
+    color: transparent;
+    height: 20px;
+    width: 20px;
+	margin-left: 5px;
+}
+#sidebar ul {
+	list-style: none outside;
+}
 #header {
 	min-height: 100px;
+    border-bottom: 4px groove rgba(0, 0, 0, 0.3);
+	padding-left: 10px
 }
 #header a:link, header a:visited {
 	text-transform:lowercase;
@@ -846,14 +853,60 @@ nav #topFilters {
 	text-shadow: 0px 0px 2px #fff;
 }
 
+	/*----------------------------------------
+	# 
+	# SIDE NAV
+	# 
+	----------------------------------------*/
+
+#singlePost #nav-above .nav-previous {
+	position: fixed;
+	left: 0;
+	top: 50%;
+}
+#singlePost #nav-above .nav-next {
+	position: fixed;
+	right: 0;
+	top: 50%;
+}
+#singlePost #nav-above a:link {
+	display: block;
+	padding: 0px 20px;
+	line-height: 1em;
+	font-size: 1em;
+}	
+#singlePost #nav-above .meta-nav {
+	display: none;
+	min-width: 50px;
+	background: #fff;
+	border-radius: 5px;
+	padding: 15px;
+	font-weight: bold;
+	text-decoration:none;
+	color: #222;
+	box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+	position: fixed;
+	margin-top: 8px;
+}
+#singlePost #nav-above .nav-previous .meta-nav {
+	left: 80px;
+}
+
+#singlePost #nav-above .nav-next .meta-nav {
+	right: 80px;
+}
+
 /*----------------------------------------
 # 
 # ISOTOPE MAIN
 # 
 ----------------------------------------*/
+#main {
+	padding-top: 10px;	
+}
 .isotopeItem {
   min-width: 100px;
-  max-width: 215px;
+  max-width: 210px;
   max-height: 500px;
   margin: 5px;
   float: left;
@@ -935,7 +988,38 @@ article.isotopeItem .entry-content p a {
 # CONTENT
 # 
 ----------------------------------------*/
+#singlePost {
+	margin-left: 10px;
+}
+#singlePost article.format-standard .entry-content {
+	background: url(images/seamlessFrame.jpg) repeat center top;
+	font-size: 1em;
+	box-shadow: inset 0px 0px 30px rgba(0,0,0,0.2), 0px 0px 8px rgba(0,0,0,0.5);
+		-moz-box-shadow: inset 0px 0px 30px rgba(0,0,0,0.2), 0px 0px 8px rgba(0,0,0,0.5);
+		-webkit-box-shadow: inset 0px 0px 30px rgba(0,0,0,0.2), 0px 0px 8px rgba(0,0,0,0.5);
+	padding: 5px 20px;	
+}
 
+#singlePost article.format-standard .entry-content ul, article.format-standard .entry-content ol {
+	list-style: inside;
+	margin-left: 20px;
+}
+#singlePost article.format-standard .entry-content p {
+	text-indent: 40px;
+}
+#singlePost article.format-standard .entry-meta p {
+	color: rgba(0,0,0,0.6);
+	margin: 0px 0px 5px 0px;
+	padding: 0px;
+    font-size: 1.3em;
+    text-shadow: none;
+	text-transform:uppercase;
+	font-weight: bold;
+}
+#singlePost article.format-standard .entry-meta #time {
+	color: rgba(255, 255, 255, 0.3);
+	font-size: 1.5em;
+}
 
 /*----------------------------------------
 # 
@@ -949,7 +1033,78 @@ article.isotopeItem .entry-content p a {
 # GALLERY LISTING
 # 
 ----------------------------------------*/
+h1.entry-title {
+	font-size: 4em;
+	color: rgba(0,0,0,0.6);
+	line-height: 1em;
+	margin: 20px 0px 30px 0px;
+}
+#entry-gallery {
+	text-align: center;
+}
+#entry-gallery img {
+	background: rgba(255,255,255,0.3);
+	border-radius: 5px;
+	padding: 5px;
+	margin-bottom: 10px;
+}
 
+#singlePost .format-gallery .entry-meta {
+	font-size: 1.8em;
+	line-height:1.8em;
+	color: rgba(0,0,0,0.6);
+	text-shadow: 0px 1px 1px #ccc, 0px -1px 1px #333;
+	font-weight: 900;
+	text-transform: lowercase;
+	letter-spacing: 0px;
+	border-bottom: 3px groove rgba(0,0,0,0.4);
+	float: left;
+	padding-bottom: 10px;
+}
+
+#singlePost .format-gallery .entry-meta ul {
+	list-style: outside none;
+	margin: 5px 0px;
+	float: left;
+}
+
+#singlePost .format-gallery .entry-meta ul li {
+	float: left;
+}
+
+#singlePost .format-gallery .entry-meta ul li img {
+	padding-left: 10px;	
+}
+
+#singlePost .format-gallery .entry-meta #time {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 0.8em;
+    text-align: right;
+    text-shadow: none;
+	text-transform:uppercase;
+    width: 100%;
+    line-height: 0.8em;
+    padding-bottom: 10px;
+}
+
+#singlePost .format-gallery .entry-content {
+	background: url(images/seamlessFrame.jpg) repeat center top;
+	font-size: 1em;
+	box-shadow: inset 0px 0px 30px rgba(0,0,0,0.2), 0px 0px 8px rgba(0,0,0,0.5);
+		-moz-box-shadow: inset 0px 0px 30px rgba(0,0,0,0.2), 0px 0px 8px rgba(0,0,0,0.5);
+		-webkit-box-shadow: inset 0px 0px 30px rgba(0,0,0,0.2), 0px 0px 8px rgba(0,0,0,0.5);
+	padding: 5px 10px;
+	margin-top: 15px;
+	float: left;
+}
+
+#singlePost .format-gallery .entry-content p:first-child {
+	margin-top: 0px;
+	padding-top: 0px;
+}
+#singlePost .format-gallery .entry-utility {
+	float: left;	
+}
 
 /*----------------------------------------
 # 
@@ -1064,7 +1219,10 @@ img.aligncenter {
 # 
 ----------------------------------------*/
 
-
+#footerbar {
+	padding:20px 20px 0px 1.4%;	
+	background: url(images/seamlesspaperblue.jpg) repeat;
+}
 
 /*----------------------------------------
 # 
@@ -1185,4 +1343,106 @@ code {
 	.home .sticky {
 		border: none;
 	}
+}
+
+/**
+ * jQuery lightBox plugin
+ * This jQuery plugin was inspired and based on Lightbox 2 by Lokesh Dhakar (http://www.huddletogether.com/projects/lightbox2/)
+ * and adapted to me for use like a plugin from jQuery.
+ * @name jquery-lightbox-0.5.css
+ * @author Leandro Vieira Pinho - http://leandrovieira.com
+ * @version 0.5
+ * @date April 11, 2008
+ * @category jQuery plugin
+ * @copyright (c) 2008 Leandro Vieira Pinho (leandrovieira.com)
+ * @license CCAttribution-ShareAlike 2.5 Brazil - http://creativecommons.org/licenses/by-sa/2.5/br/deed.en_US
+ * @example Visit http://leandrovieira.com/projects/jquery/lightbox/ for more informations about this jQuery plugin
+ */
+#jquery-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 90;
+	width: 100%;
+	height: 500px;
+}
+#jquery-lightbox {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	text-align: center;
+	line-height: 0;
+}
+#jquery-lightbox a img { border: none; }
+#lightbox-container-image-box {
+	position: relative;
+	background-color: #fff;
+	width: 250px;
+	height: 250px;
+	margin: 0 auto;
+}
+#lightbox-container-image { padding: 10px; }
+#lightbox-loading {
+	position: absolute;
+	top: 40%;
+	left: 0%;
+	height: 25%;
+	width: 100%;
+	text-align: center;
+	line-height: 0;
+}
+#lightbox-nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 10;
+}
+#lightbox-container-image-box > #lightbox-nav { left: 0; }
+#lightbox-nav a { outline: none;}
+#lightbox-nav-btnPrev, #lightbox-nav-btnNext {
+	width: 49%;
+	height: 100%;
+	zoom: 1;
+	display: block;
+}
+#lightbox-nav-btnPrev { 
+	left: 0; 
+	float: left;
+}
+#lightbox-nav-btnNext { 
+	right: 0; 
+	float: right;
+}
+#lightbox-container-image-data-box {
+	font: 10px Verdana, Helvetica, sans-serif;
+	background-color: #fff;
+	margin: 0 auto;
+	line-height: 1.4em;
+	overflow: auto;
+	width: 100%;
+	padding: 0 10px 0;
+}
+#lightbox-container-image-data {
+	padding: 0 10px; 
+	color: #666; 
+}
+#lightbox-container-image-data #lightbox-image-details { 
+	width: 70%; 
+	float: left; 
+	text-align: left; 
+}	
+#lightbox-image-details-caption { font-weight: bold; }
+#lightbox-image-details-currentNumber {
+	display: block; 
+	clear: left; 
+	padding-bottom: 1.0em;	
+}			
+#lightbox-secNav-btnClose {
+	width: 66px; 
+	float: right;
+	padding-bottom: 0.7em;	
 }
