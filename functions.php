@@ -62,6 +62,9 @@ endif;
 wp_register_script('jquery', get_template_directory_uri() . 'http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js', array() );
 if( !is_admin() ){ wp_enqueue_script('jquery'); }
 
+wp_register_script('bbq', get_template_directory_uri() . '/js/jquery.ba-bbq.min.js', array() );
+if( !is_admin() ){ wp_enqueue_script('bbq'); }
+
 wp_register_script('lightbox', get_template_directory_uri() . '/js/jquery.lightbox-0.5.min.js', array() );
 if( !is_admin() ){ wp_enqueue_script('lightbox'); }
 
