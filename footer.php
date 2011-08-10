@@ -18,8 +18,11 @@
   	var $j=jQuery.noConflict(); 
 
     $j('document').ready(function(){
-	   
-      
+/*		$j('document').height(function(){
+		var mainheight = $j(this) * 0.8;
+		$j('#main').css('min-height',mainheight);
+	});
+	*/      
       var container = $j('#main');
 
       container.isotope({
@@ -84,8 +87,12 @@
           var hashOptions = $j.deparam.fragment();
           // apply options from hash
           container.isotope( hashOptions );
-		  // adds selected class to category in hash
-		  $j('a[href="#filter=' + hashOptions['filter'] + '"]').addClass('selected');
+		  // remove selected class from all nav links, readds only to hash category
+		  if ( hashOptions['filter'] ){
+			  $j('.option-set a').removeClass('selected');
+			  $j('#navPortfolio a').addClass('selected');
+			  $j('a[href="#' + $j.param(hashOptions) + '"]').addClass('selected');
+		  }
       })
           // trigger hashchange to capture any hash data on init
       .trigger('hashchange');
