@@ -81,7 +81,7 @@
           // get options object from hash
           var hashOptions = $j.deparam.fragment();
           // apply options from hash
-          $container.isotope( hashOptions );
+          container.isotope( hashOptions );
       })
           // trigger hashchange to capture any hash data on init
       .trigger('hashchange');
