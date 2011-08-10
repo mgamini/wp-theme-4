@@ -16,7 +16,9 @@
         </div>
         <script type="text/javascript">
   	var $j=jQuery.noConflict(); 
+
     $j('document').ready(function(){
+	   
       
       var container = $j('#main');
 
@@ -82,6 +84,8 @@
           var hashOptions = $j.deparam.fragment();
           // apply options from hash
           container.isotope( hashOptions );
+		  // adds selected class to category in hash
+		  $j('a[href="#filter=' + hashOptions['filter'] + '"]').addClass('selected');
       })
           // trigger hashchange to capture any hash data on init
       .trigger('hashchange');
