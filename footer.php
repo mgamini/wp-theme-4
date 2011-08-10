@@ -18,11 +18,10 @@
   	var $j=jQuery.noConflict(); 
 
     $j('document').ready(function(){
-/*		$j('document').height(function(){
-		var mainheight = $j(this) * 0.8;
-		$j('#main').css('min-height',mainheight);
-	});
-	*/      
+
+		var mainheight = $j(window).height() * 0.8;		
+		$j('#main').css('min-height', mainheight);
+			      
       var container = $j('#main');
 
       container.isotope({
