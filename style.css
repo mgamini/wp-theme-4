@@ -416,14 +416,61 @@ img {
 	}
 	#singlePost h1.entry-title {
     font-size: 2em !important;
-    line-height: 2em !important;
-    margin: 0 0 10px !important;
+    line-height: 1.1em !important;
+    margin: 10px 0px 10px 0px !important;
 	}
 	#nav-above {
 		display: none;
 	}
-	#singlePost .entry-meta {
-		background: blue;	
+	#singlePost {
+		margin-right: 10px;
+	}
+	#singlePost article.twelvecol, #singlePost section.eightcol {
+		padding: 0px !important;
+	}
+	#singlePost .entry {
+		padding: 0px !important;	
+	}
+	#singlePost article {
+		position: relative;
+	}
+	#singlePost article .entry-meta {
+		position: absolute;
+		top: 85px;
+	}
+	#singlePost article.format-gallery .entry-meta {
+		font-size:1.3em !important;
+	}
+	#singlePost article.format-standard .entry-meta {
+		right: 0px;	
+		text-align: right;
+	}
+	#singlePost .format-gallery .entry-meta img {
+		height: 30px;
+	}
+	#singlePost article #entry-gallery {
+		position: relative;
+		top: 175px;
+		padding: 0px 10px 0px 0px !important;
+	}
+	#singlePost article .entry-content {
+		position: relative;
+	}
+	#singlePost article.format-gallery .entry-content {
+		top: 175px;
+		margin-bottom: 195px;
+	}
+	#singlePost article.format-standard .entry-content {
+		top: 85px;
+		margin-bottom: 175px;
+	}
+	#footerbar {
+		background: url(images/seamlesspapergrey.jpg) repeat !important;
+		padding-bottom: 80px !important;
+	}
+	#skyline {
+		left: 0px !important;
+		width: 100% !important;
 	}
 }
 
@@ -1110,12 +1157,14 @@ article.isotopeItem .entry-content p a {
 	border-bottom: 3px groove rgba(0,0,0,0.4);
 	float: left;
 	padding-bottom: 10px;
+	width: 100%;
 }
 
 #singlePost .format-gallery .entry-meta ul {
 	list-style: outside none;
 	margin: 5px 0px;
 	float: left;
+	width: 100%;
 }
 
 #singlePost .format-gallery .entry-meta ul li {

@@ -137,12 +137,14 @@
 		function(){
 			$j('#nav-above .nav-next .meta-nav').fadeOut('fast');
 	});
-	$j('#entry-gallery a').lightBox({
-	imageLoading: '<?php bloginfo( 'template_url' ); ?>/images/lightbox-btn-loading.gif',
-	imageBtnClose: '<?php bloginfo( 'template_url' ); ?>/images/lightbox-btn-close.gif',
-	imageBtnPrev: '<?php bloginfo( 'template_url' ); ?>/images/lightbox-btn-prev.gif',
-	imageBtnNext: '<?php bloginfo( 'template_url' ); ?>/images/lightbox-btn-next.gif'	
-	});
+	if ( $j(window).width() >= 767 ) {
+		$j('#entry-gallery a').lightBox({
+			imageLoading: '<?php bloginfo( 'template_url' ); ?>/images/lightbox-btn-loading.gif',
+			imageBtnClose: '<?php bloginfo( 'template_url' ); ?>/images/lightbox-btn-close.gif',
+			imageBtnPrev: '<?php bloginfo( 'template_url' ); ?>/images/lightbox-btn-prev.gif',
+			imageBtnNext: '<?php bloginfo( 'template_url' ); ?>/images/lightbox-btn-next.gif'	
+		});
+	}
 });
 
 </script>
