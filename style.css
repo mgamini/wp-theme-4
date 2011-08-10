@@ -393,7 +393,38 @@ img {
 	padding-left: 20px;
 	padding-right: 20px;
 	}
-
+	#leftBack {
+	display: none;
+	}
+	.leftContent {
+	background: url(images/seamlesspapergrey.jpg) repeat !important;
+	text-align: center;	
+	padding-bottom: 20px !important;
+	}
+	#rightContent {
+	background: url(images/seamlesspaperblue.jpg) repeat !important;
+	}
+	#header {
+		min-height: 80px !important;
+	}
+	nav #topFilters {
+    font-size: 2em !important;
+    line-height: 1em !important;
+	}
+	#main {
+		min-width: 400px;
+	}
+	#singlePost h1.entry-title {
+    font-size: 2em !important;
+    line-height: 2em !important;
+    margin: 0 0 10px !important;
+	}
+	#nav-above {
+		display: none;
+	}
+	#singlePost .entry-meta {
+		background: blue;	
+	}
 }
 
 @media handheld, only screen and (max-width: 400px) {
@@ -403,6 +434,25 @@ img {
 	}
 	input, textarea {
 	max-width: 100% !important;
+	}
+	nav #topFilters {
+    font-size: 1.3em !important;
+    line-height: 1em !important;
+	}
+	#rightContent {
+		padding: 10px 5px !important;
+	}
+	#header {
+		min-height: 50px !important;
+	}
+	#access {
+		padding: 0px;
+	}
+	#header nav ul#portfolioFilters a {
+		font-size: 1em !important;	
+	}
+	#main {
+		min-width: 400px;
 	}
 }
 
@@ -788,6 +838,7 @@ body {
 	border-radius: 5px;
 	width: 75%;
 	min-width: 50px;
+	color: #6d8e99;
 }
 #sidebar #searchsubmit {
 	background: url(images/magnifying-glass.png) no-repeat;
@@ -832,12 +883,10 @@ nav #topFilters {
 	clear:both;
 }
 #header nav ul#portfolioFilters {
-	width: 33%;
 	text-align: center;
 }
 #header nav ul#portfolioFilters li {
 	float: left;
-	min-width: 50px;
 }
 #header nav ul#portfolioFilters a {
 	display: block;
@@ -846,6 +895,7 @@ nav #topFilters {
     font-weight: bold;
     text-shadow: 0 0 4px #000000;
     text-transform: lowercase;
+	padding: 0px 10px;
 }
 
 #header nav ul#portfolioFilters li:hover > a, #header nav ul#portfolioFilters li > a.selected {
@@ -1033,11 +1083,11 @@ article.isotopeItem .entry-content p a {
 # GALLERY LISTING
 # 
 ----------------------------------------*/
-h1.entry-title {
+#singlePost h1.entry-title {
 	font-size: 4em;
 	color: rgba(0,0,0,0.6);
 	line-height: 1em;
-	margin: 20px 0px 30px 0px;
+	margin: 0px 0px 30px 0px;
 }
 #entry-gallery {
 	text-align: center;

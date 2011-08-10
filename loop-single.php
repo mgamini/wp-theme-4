@@ -78,7 +78,7 @@
 		<?php the_content(); ?>
         </div>
     </section>
-    <section class="entry-meta" class="fourcol last">
+    <section class="entry-meta fourcol last">
 		<p id="time"><?php the_time('M d, Y'); ?></p>
       	<p>By <?php the_author(); ?></p>
       <div class="entry-utility">
