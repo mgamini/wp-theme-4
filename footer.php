@@ -65,6 +65,27 @@
 			$j('.isotopeItem.highlight').siblings().fadeTo('fast', 1);
 			$j(this).removeClass('highlight');
 		});
+      // -------- begin josh -------- //
+      $j('.option-set a').click(function(){
+          // get href attr, remove leading #
+          var href = $j(this).attr('href').replace( /^#/, '' ),
+              // convert href into object
+              // i.e. 'filter=.inner-transition' -> { filter: '.inner-transition' }
+              option = $j.deparam( href, true );
+          // set hash, triggers hashchange on window
+          $j.bbq.pushState( option );
+          return false;
+      });
+
+      $j(window).bind( 'hashchange', function( event ){
+          // get options object from hash
+          var hashOptions = $j.deparam.fragment();
+          // apply options from hash
+          $jcontainer.isotope( hashOptions );
+      })
+          // trigger hashchange to capture any hash data on init
+      .trigger('hashchange');
+      // -------- end josh -------- //
 		
 	$j('nav #topFilters').hover( 
 		function () {
