@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-
+	<?php get_template_part( 'nav', 'index' ); ?>
 		<div id="main" role="main" class="<?php brunelleschi_sidebar_class(); ?>">
 
 <?php if ( have_posts() ) : ?>
