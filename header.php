@@ -1,3 +1,4 @@
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
 <!doctype html>
 <!--[if lt IE 7]> <html class="no-js ie6" <?php echo language_attributes(); ?>> <![endif]-->
 <!--[if IE 7]>    <html class="no-js ie7" <?php echo language_attributes(); ?>> <![endif]-->
@@ -11,6 +12,9 @@
 </title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+<!--[if IE]>
+<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_url' ); ?>/IE.css" />
+<!--<![endif]-->
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,400italic' rel='stylesheet' type='text/css'>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">

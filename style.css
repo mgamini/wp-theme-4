@@ -546,7 +546,7 @@ width: 74.05%;
 }
 
 .ie6 .tencol, .ie7 .tencol, .ie8 .tencol {
-width: 82%;
+width: 80%;
 }
 
 .ie6 .elevencol, .ie7 .elevencol, .ie8 .elevencol {
@@ -879,10 +879,12 @@ body {
 	background: rgba(255,255,255,0.1);
 	border: 2px solid #6d8e99;
 	box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
-	-moz-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
-	-webkit-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+		-moz-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+		-webkit-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
 	padding: 2px;
 	border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
 	width: 75%;
 	min-width: 50px;
 	color: #6d8e99;
@@ -923,6 +925,8 @@ body {
 nav #topFilters {
 	font-size: 3em;
 	text-shadow: 0px 1px 1px #fff, 0px -1px 1px #000;
+		-moz-text-shadow: 0px 1px 1px #fff, 0px -1px 1px #000;
+		-webkit-text-shadow: 0px 1px 1px #fff, 0px -1px 1px #000;
     height: 1.5em;
     line-height: 1.2em;
 }
@@ -941,6 +945,8 @@ nav #topFilters {
 	color: #c9d1d3;	
     font-weight: bold;
     text-shadow: 0 0 4px #000000;
+		-moz-text-shadow: 0 0 4px #000000;
+		-webkit-text-shadow: 0 0 4px #000000;
     text-transform: lowercase;
 	padding: 0px 10px;
 }
@@ -948,6 +954,8 @@ nav #topFilters {
 #header nav ul#portfolioFilters li:hover > a, #header nav ul#portfolioFilters li > a.selected {
 	color: #212121;
 	text-shadow: 0px 0px 2px #fff;
+		-moz-text-shadow: 0px 0px 2px #fff;
+		-webkit-text-shadow: 0px 0px 2px #fff;
 }
 
 	/*----------------------------------------
@@ -977,11 +985,15 @@ nav #topFilters {
 	min-width: 50px;
 	background: #fff;
 	border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
 	padding: 15px;
 	font-weight: bold;
 	text-decoration:none;
 	color: #222;
 	box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+		-moz-box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+		-webkit-box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
 	position: fixed;
 	margin-top: 8px;
 }
@@ -1142,6 +1154,8 @@ article.isotopeItem .entry-content p a {
 #entry-gallery img {
 	background: rgba(255,255,255,0.3);
 	border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
 	padding: 5px;
 	margin-bottom: 10px;
 }
@@ -1151,6 +1165,8 @@ article.isotopeItem .entry-content p a {
 	line-height:1.8em;
 	color: rgba(0,0,0,0.6);
 	text-shadow: 0px 1px 1px #ccc, 0px -1px 1px #333;
+		-moz-text-shadow: 0px 1px 1px #ccc, 0px -1px 1px #333;
+		-webkit-text-shadow: 0px 1px 1px #ccc, 0px -1px 1px #333;
 	font-weight: 900;
 	text-transform: lowercase;
 	letter-spacing: 0px;
@@ -1442,6 +1458,56 @@ code {
 	.home .sticky {
 		border: none;
 	}
+body {
+	background: white !important;
+}
+
+#leftBack {
+	display: none !important;
+}
+#wrapper { 
+	max-width: auto;
+	margin: 0 auto;
+}
+
+.leftContent {
+	display: none;
+}
+#rightContent {
+	background: white !important;
+	padding: 0px !important;
+	margin: 0px auto;
+}
+
+header {
+	display: none;
+}
+
+#singlePost .entry-content {
+	background: white !important;
+}
+.entry-meta {
+	color: #222 !important;
+}
+
+footer {
+	display: none;
+}
+
+#skyline {
+	display: none;
+}
+a:link, a:visited {
+	color: #520;
+	background: transparent;
+	font-weight: bold;
+	text-decoration: underline;
+	}
+	
+#singlePost a:link:after, #singlePost a:visited:after {
+   content: " (" attr(href) ") ";
+   font-size: 90%;
+   }
 }
 
 /**
