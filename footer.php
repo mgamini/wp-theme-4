@@ -15,9 +15,11 @@
         
         </div>
         <script type="text/javascript">
+		
   	var $j=jQuery.noConflict(); 
 
     $j('document').ready(function(){
+		
 
 		var mainheight = $j(window).height() * 0.9;		
 		$j('#main').css('min-height', mainheight);

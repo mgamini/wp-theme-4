@@ -1100,6 +1100,9 @@ article.isotopeItem .entry-content p a {
 #singlePost {
 	margin-left: 10px;
 }
+#singlePost article {
+	margin-bottom: 20px;
+}
 #singlePost article.format-standard .entry-content {
 	background: url(images/seamlessFrame.jpg) repeat center top;
 	font-size: 1em;
@@ -1290,10 +1293,26 @@ img.aligncenter {
 
 /*----------------------------------------
 # 
-# COMMENTS
+# Contact/about
 # 
 ----------------------------------------*/
 
+div.wpcf7 {
+	padding-top: 10px !important;
+}
+div.wpcf7 p {
+	text-indent: 0px !important;
+}
+.aboutMe h3 {
+	margin-top: 0px;
+}
+
+.aboutMe ul {
+	list-style: inside;
+}
+.aboutMe img {
+	box-shadow: 0px 0px 5px rgba(255,255,255,0.3);
+}
 /*----------------------------------------
 # 
 # WIDGET AREAS
