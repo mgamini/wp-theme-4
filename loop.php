@@ -32,26 +32,23 @@
 		</article><!-- #post-## -->
 
 	<?php elseif ( ( function_exists( 'get_post_format' ) && 'aside' == get_post_format( $post->ID ) ) || in_category( _x( 'asides', 'asides category slug', 'brunelleschi' ) )  ) : ?>
-		<aside id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-		<?php if ( is_archive() || is_search() ) : // Display excerpts for archives and search. ?>
-			<div class="entry-summary">
-				<?php the_excerpt(); ?>
-			</div><!-- .entry-summary -->
-		<?php else : ?>
-			<div class="entry-content">
-				<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'brunelleschi' ) ); ?>
-			</div><!-- .entry-content -->
-		<?php endif; ?>
-
-			<div class="entry-utility">
-				<?php brunelleschi_posted_on(); ?>
-				<span class="meta-sep">|</span>
-				<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'brunelleschi' ), __( '1 Comment', 'brunelleschi' ), __( '% Comments', 'brunelleschi' ) ); ?></span>
-				<?php edit_post_link( __( 'Edit', 'brunelleschi' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>
-			</div><!-- .entry-utility -->
-		</aside><!-- #post-## -->
-
+        <article id="post-<?php the_ID(); ?>" <?php post_class('format-standard aside isotopeItem'); ?>>
+            <h1 class="entry-title">
+              <?php the_title(); ?>
+            </h1>
+        <section class="eightcol">
+            <div class="entry-content">
+            <?php the_content(); ?>
+            </div>
+        </section>
+        <section class="aboutMe fourcol last">
+            <?php $recent = new WP_Query( 'pagename=about-me' ); while($recent->have_posts()) : $recent->the_post();?>
+               <h3><?php the_title(); ?></h3>
+               <?php the_content(); ?>
+            <?php endwhile; ?>     
+    
+        </section>
+       </article>
 	<?php else : ?>
 		<article id="post-<?php the_ID(); ?>" <?php post_class('isotopeItem'); ?>>
 			<header>

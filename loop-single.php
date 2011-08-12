@@ -75,8 +75,28 @@
       </section>
       </article>
       <!-- #post-## --> 
-    
-<?php else : ?>
+        <?php comments_template( '', true ); ?>
+<?php elseif ( ( function_exists( 'get_post_format' ) && 'aside' == get_post_format( $post->ID ) ) || in_category( _x( 'aside', 'aside category slug', 'brunelleschi' ) ) ) : ?>
+
+    <article id="post-<?php the_ID(); ?>" <?php post_class('twelvecol last format-standard'); ?>>
+        <h1 class="entry-title">
+          <?php the_title(); ?>
+        </h1>
+    <section class="eightcol">
+        <div class="entry-content">
+		<?php the_content(); ?>
+        </div>
+    </section>
+    <section class="aboutMe fourcol last">
+		<?php $recent = new WP_Query( 'pagename=about-me' ); while($recent->have_posts()) : $recent->the_post();?>
+           <h3><?php the_title(); ?></h3>
+           <?php the_content(); ?>
+		<?php endwhile; ?>     
+
+    </section>
+   </article>
+
+ <?php else : ?>
      <article id="post-<?php the_ID(); ?>" <?php post_class('twelvecol last'); ?>>
         <h1 class="entry-title">
           <?php the_title(); ?>
@@ -94,9 +114,9 @@
       </div>
     </section>
    </article>
-    <?php endif; ?>
-    <!-- #nav-below -->
-    
-    <?php comments_template( '', true ); ?>
+       <?php comments_template( '', true ); ?>
+<?php endif; ?>
+
+
 <?php endwhile; ?>
 </div>

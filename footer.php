@@ -27,7 +27,7 @@
       var container = $j('#main');
 		$j('#main').isotope({
 		  // options...
-		  filter: ':not(.category-cat-blog)'
+		  filter: ':not(.category-cat-blog, .category-contact)'
 		});
     
       $j('#main').imagesLoaded( function(){

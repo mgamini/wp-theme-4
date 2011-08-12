@@ -1139,7 +1139,37 @@ article.isotopeItem .entry-content p a {
 # 
 ----------------------------------------*/
 
+article.isotopeItem.format-aside {
+    background: none;
+    border-radius: none;
+    box-shadow: none;
+}
 
+.isotopeItem.format-aside {
+    color: #222222;
+    float: left;
+    margin: 5px;
+    max-height: 100%;
+    max-width: 100%;
+    min-width: 100px;
+    overflow: hidden;
+    padding: 5px;
+    position: relative;
+}
+
+article.isotopeItem.format-aside .entry-content, #singlePost article.format-aside .entry-content {
+    background: url("images/seamlessFrame.jpg") repeat scroll center top transparent;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2) inset, 0 0 8px rgba(0, 0, 0, 0.5);
+    font-size: 1em;
+    padding: 5px 20px;
+}
+
+article.isotopeItem.format-aside h1.entry-title {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 4em;
+    line-height: 1em;
+    margin: 15px 0 30px;
+}
 /*----------------------------------------
 # 
 # GALLERY LISTING
