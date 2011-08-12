@@ -32,7 +32,7 @@
 		</article><!-- #post-## -->
 
 	<?php elseif ( ( function_exists( 'get_post_format' ) && 'aside' == get_post_format( $post->ID ) ) || in_category( _x( 'asides', 'asides category slug', 'brunelleschi' ) )  ) : ?>
-        <article id="post-<?php the_ID(); ?>" <?php post_class('format-standard aside isotopeItem'); ?>>
+        <article id="post-<?php the_ID(); ?>" <?php post_class('aside isotopeItem'); ?>>
             <h1 class="entry-title">
               <?php the_title(); ?>
             </h1>

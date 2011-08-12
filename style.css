@@ -414,7 +414,7 @@ img {
 	#main {
 		min-width: 400px;
 	}
-	#singlePost h1.entry-title {
+	#singlePost h1.entry-title, article.aside h1.entry-title {
     font-size: 2em !important;
     line-height: 1.1em !important;
     margin: 10px 0px 10px 0px !important;
@@ -425,7 +425,7 @@ img {
 	#singlePost {
 		margin-right: 10px;
 	}
-	#singlePost article.twelvecol, #singlePost section.eightcol {
+	#singlePost article.twelvecol, #singlePost section.eightcol, article.aside.twelvecol, article.aside section.eightcol, article.aside section.fourcol  {
 		padding: 0px !important;
 	}
 	#singlePost .entry {
@@ -472,15 +472,32 @@ img {
 		left: 0px !important;
 		width: 100% !important;
 	}
+	#skyline iframe {
+		display: none;
+	}
+	.isotopeItem.format-aside {
+		max-width: 65% !important;	
+	}
+	article.aside .entry-content {
+		margin: 0px 0px 10px 0px !important;
+		padding: 5px !important;
+	}
+	
+	#main {
+		padding: 0px !important;
+	}
+	article.aside table {
+		width:40% !important;
+	}
+	.aboutMe object {
+		display:none;
+	}
 }
 
 @media handheld, only screen and (max-width: 400px) {
 	/* prevent too-wide images from breaking layout */
 	.wp-caption {
 	width: auto !important;
-	}
-	input, textarea {
-	max-width: 100% !important;
 	}
 	nav #topFilters {
     font-size: 1.3em !important;
@@ -1016,7 +1033,7 @@ nav #topFilters {
 #main {
 	padding-top: 10px;
 }
-.isotopeItem {
+.isotopeItem.format-standard, .isotopeItem.format-gallery {
   min-width: 100px;
   max-width: 208px;
   max-height: 500px;
@@ -1152,7 +1169,7 @@ article.isotopeItem.format-aside {
     color: #222222;
     float: left;
     margin: 5px;
-    max-height: auto;
+    min-height: auto !important;
     max-width: 100%;
     min-width: 100px;
     overflow: hidden;
@@ -1175,7 +1192,7 @@ article.isotopeItem.format-aside h1.entry-title {
 }
 
 div.wpcf7 {
-	padding-top: 10px !important;
+	padding: 10px 0px !important;
 }
 div.wpcf7 p {
 	text-indent: 0px !important;
@@ -1190,7 +1207,32 @@ div.wpcf7 p {
 .aboutMe img {
 	box-shadow: 0px 0px 5px rgba(255,255,255,0.3);
 }
-
+form.wpcf7-form ul {
+    float: left;
+    list-style: none outside none;
+    margin: 0 0 8px;
+    padding: 0;
+    width: 100%;
+}
+form.wpcf7-form ul li {
+    float: left;
+    font-size: 1.2em;
+    line-height: 1.2em;
+    padding-right: 10px;
+}
+form.wpcf7-form p {
+	line-height: 2.3em;
+}
+input.wpcf7-submit {
+	width: 50%;
+	margin: 10px;
+}
+form.wpcf7-form ul li input {
+	width: 95%;
+}
+.your-message textarea {
+	width: 100%;
+}
 
 /*----------------------------------------
 # 
