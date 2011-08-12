@@ -3,13 +3,11 @@
             	<div class="leftContent twocol last"></div> 
 				<div id="footerbar" class="tencol last">
 					<?php get_sidebar( 'footer' ); ?>
-						<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-							<?php bloginfo( 'name' ); ?>
-						</a>
 				</div><!-- #colophon -->
 			</footer><!-- #footer -->
         <div id="skyline">
-        	<img src="<?php bloginfo( 'template_url' ); ?>/images/seattleSkyline.png">
+<iframe src="http://www.google.com/talk/service/badge/Show?tk=z01q6amlq2rf0vb1s69f15f2hv6itgcm5m4jg6tcm0ijtqna0pq43c45bscaid5s1tjeh8hquf1i0pk1uo69ek7kt2fdgqbe0bp868acmjavidk6106598rkac372hjrpbufbnhuodlssda0&amp;w=159&amp;h=36" frameborder="0" allowtransparency="true" width="129" height="36"></iframe>        	
+<img src="<?php bloginfo( 'template_url' ); ?>/images/seattleSkyline.png">
         </div>
 		</div><!-- #wrapper -->
         

@@ -844,15 +844,18 @@ body {
 	left: 0;
 	width: 100%;
 }
-
-
-
-
 #skyline {
 	position: absolute;
 	left: 20px;
 	bottom: 0px;
 	z-index: 1;
+}
+#skyline iframe {
+	background: url("images/chatbox.png") repeat scroll 0 0 transparent;
+    left: 10px;
+    overflow: hidden;
+    padding: 10px 10px 22px;
+    position: absolute;
 }
 
 #rightContent {
@@ -1149,7 +1152,7 @@ article.isotopeItem.format-aside {
     color: #222222;
     float: left;
     margin: 5px;
-    max-height: 100%;
+    max-height: auto;
     max-width: 100%;
     min-width: 100px;
     overflow: hidden;
@@ -1170,6 +1173,25 @@ article.isotopeItem.format-aside h1.entry-title {
     line-height: 1em;
     margin: 15px 0 30px;
 }
+
+div.wpcf7 {
+	padding-top: 10px !important;
+}
+div.wpcf7 p {
+	text-indent: 0px !important;
+}
+.aboutMe h3 {
+	margin-top: 0px;
+}
+
+.aboutMe ul {
+	list-style: inside;
+}
+.aboutMe img {
+	box-shadow: 0px 0px 5px rgba(255,255,255,0.3);
+}
+
+
 /*----------------------------------------
 # 
 # GALLERY LISTING
@@ -1320,29 +1342,6 @@ img.aligncenter {
 	margin: 0 auto;
 }
 
-
-/*----------------------------------------
-# 
-# Contact/about
-# 
-----------------------------------------*/
-
-div.wpcf7 {
-	padding-top: 10px !important;
-}
-div.wpcf7 p {
-	text-indent: 0px !important;
-}
-.aboutMe h3 {
-	margin-top: 0px;
-}
-
-.aboutMe ul {
-	list-style: inside;
-}
-.aboutMe img {
-	box-shadow: 0px 0px 5px rgba(255,255,255,0.3);
-}
 /*----------------------------------------
 # 
 # WIDGET AREAS
