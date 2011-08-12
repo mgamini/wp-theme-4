@@ -1,6 +1,6 @@
     <nav id="filters" class="option-set clearfix" data-option-key="filter">
       <ul id="topFilters">
-      	<li id="navPortfolio"><a href="#filter=%3Anot(.category-cat-blog)" class="selected">Portfolio</a></li>
+      	<li id="navPortfolio"><a href="#filter=%3Anot(.category-cat-blog, .category-contact)" class="selected">Portfolio</a></li>
         <li><a href="#filter=.category-cat-blog">blog</a></li>
         <li><a href="#filter=.category-contact">contact</a></li>
       </ul>
