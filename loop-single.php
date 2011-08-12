@@ -1,10 +1,10 @@
 <div id="singlePost">
     <nav id="nav-above" class="navigation">
       <div class="nav-previous">
-        <?php previous_post_link( '%link', '<img src="http://localhost/wordpress/wp-content/themes/brunelleschi/images/leftChevron.png" />' . '<span class="meta-nav">' . '%title' . '</span>', TRUE ); ?>
+        <?php previous_post_link( '%link', '<img src="http://m.garrettamini.com/wp-content/themes/brunelleschi/images/leftChevron.png" />' . '<span class="meta-nav">' . '%title' . '</span>', TRUE ); ?>
       </div>
       <div class="nav-next">
-        <?php next_post_link( '%link', '<img src="http://localhost/wordpress/wp-content/themes/brunelleschi/images/rightChevron.png" />' . '<span class="meta-nav">' . '%title' . '</span>', TRUE ); ?>
+        <?php next_post_link( '%link', '<img src="http://m.garrettamini.com/wp-content/themes/brunelleschi/images/rightChevron.png" />' . '<span class="meta-nav">' . '%title' . '</span>', TRUE ); ?>
       </div>
     </nav>
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
@@ -20,7 +20,7 @@
     $images = get_children(array(
     'post_type' => 'attachment',
     'post_status' => null,
-    'post_parent' => $the_ID,
+    'post_parent' => $post->ID,
     'post_mime_type' => 'image',
     'order' => 'ASC',
     'orderby' => 'menu_order ID'));
@@ -49,8 +49,16 @@
         <div id="tools">
           <ul>
             <li>Tools:</li>
-            <?php if (in_category( 'Illustrator' )) { echo "<li><img src='http://localhost/wordpress/wp-content/themes/brunelleschi/images/illustrator.png' /></li>"; } ?>
-            <?php if (in_category( 'Photoshop' )) { echo "<li><img src='http://localhost/wordpress/wp-content/themes/brunelleschi/images/photoshop.png' /></li>"; } ?>
+            <?php if (in_category( 'Illustrator' )) { echo "<li><img src='/wp-content/themes/brunelleschi/images/illustrator.png' alt='Adobe Illustrator' title='Adobe Illustrator' /></li>"; } ?>
+            <?php if (in_category( 'Photoshop' )) { echo "<li><img src='/wp-content/themes/brunelleschi/images/photoshop.png' alt='Adobe Photoshop' title='Adobe Photoshop' /></li>"; } ?>
+            <?php if (in_category( 'HTML' )) { echo "<li><img src='/wp-content/themes/brunelleschi/images/html.png' alt='HTML' title='HTML' /></li>"; } ?>
+            <?php if (in_category( 'CSS' )) { echo "<li><img src='/wp-content/themes/brunelleschi/images/css.png' alt='CSS' title='CSS' /></li>"; } ?>
+            <?php if (in_category( 'jQuery' )) { echo "<li><img src='/wp-content/themes/brunelleschi/images/jquery.png' alt='jQuery' title='jQuery' /></li>"; } ?>
+            <?php if (in_category( 'Javascript' )) { echo "<li><img src='/wp-content/themes/brunelleschi/images/javascript.png' alt='Javascript' title='Javascript' /></li>"; } ?>
+            <?php if (in_category( 'HTML5' )) { echo "<li><img src='/wp-content/themes/brunelleschi/images/html5.png' alt='HTML5' title='HTML5' /></li>"; } ?>
+            <?php if (in_category( 'CSS3' )) { echo "<li><img src='/wp-content/themes/brunelleschi/images/css3.png' alt='CSS3' title='CSS3' /></li>"; } ?>
+            <?php if (in_category( 'Mobile' )) { echo "<li><img src='/wp-content/themes/brunelleschi/images/mobile.png' alt='Mobile' title='Mobile' /></li>"; } ?>
+            <?php if (in_category( 'Wordpress' )) { echo "<li><img src='/wp-content/themes/brunelleschi/images/wordpress.png' alt='Wordpress' title='Wordpress' /></li>"; } ?>
           </ul>
         </div>
       </div>

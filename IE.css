@@ -1,0 +1,13 @@
+/* CSS Document */
+
+header {
+	border-bottom: 2px solid #222;
+}
+
+#header a:link, header a:visited, #singlePost article.format-standard .entry-meta #time {
+	color: #eee;
+}
+
+#rightContent {
+	background: url("images/seamlesspaperblue.jpg") repeat scroll 0 0 transparent;
+}

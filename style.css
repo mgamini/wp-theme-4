@@ -1190,7 +1190,9 @@ article.isotopeItem .entry-content p a {
 #singlePost .format-gallery .entry-meta ul li img {
 	padding-left: 10px;	
 }
-
+#singlePost .format-gallery .entry-meta #tools ul li img {
+	margin-bottom: 10px;
+}
 #singlePost .format-gallery .entry-meta #time {
     color: rgba(255, 255, 255, 0.3);
     font-size: 0.8em;

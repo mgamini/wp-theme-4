@@ -1,7 +1,6 @@
 <div id="main" role="main" class="twelvecol last">
-<?php $wp_query->posts_per_page = -1 ; ?>
-<?php if ( $wp_query->max_num_pages > 1 ) : ?>
-<?php endif; ?>
+<?php $the_query = new WP_Query( 'posts_per_page = -1' ); ?>
+
 <?php if ( ! have_posts() ) : ?>
 	<div id="post-0" class="post error404 not-found">
 		<h1 class="entry-title"><?php _e( 'Not Found', 'brunelleschi' ); ?></h1>
@@ -12,7 +11,7 @@
 	</div><!-- #post-0 -->
 <?php endif; ?>
 
-<?php while ( have_posts() ) : the_post(); ?>
+<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
 	<?php if ( ( function_exists( 'get_post_format' ) && 'gallery' == get_post_format( $post->ID ) ) || in_category( _x( 'gallery', 'gallery category slug', 'brunelleschi' ) ) ) : ?>	
         <article id="post-<?php the_ID(); ?>" <?php post_class('isotopeItem'); ?>>
@@ -25,7 +24,10 @@
                     <h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s'), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
                     <div class="entry-meta">
                         <time datetime="<?php the_time('Y-m-d')?>"><?php the_time('M Y') ?></time>
-                    </div><!-- .entry-meta -->
+                    </div>
+                    <!--<div class="entry-content">
+						<?php the_excerpt(); ?>
+					</div>-->
             </header>
 		</article><!-- #post-## -->
 
@@ -69,6 +71,8 @@
 	<?php endif; ?>
 
 <?php endwhile; ?>
+
+<?php wp_reset_postdata(); ?>
 
 
 </div>

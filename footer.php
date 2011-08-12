@@ -19,15 +19,20 @@
 
     $j('document').ready(function(){
 
-		var mainheight = $j(window).height() * 0.8;		
+		var mainheight = $j(window).height() * 0.9;		
 		$j('#main').css('min-height', mainheight);
 			      
       var container = $j('#main');
-
-      container.isotope({
-        itemSelector : '.isotopeItem'
-      });
-      
+		$j('#main').isotope({
+		  // options...
+		  filter: ':not(.category-cat-blog)'
+		});
+    
+      $j('#main').imagesLoaded( function(){
+		  $j(this).isotope({
+			itemSelector : '.isotopeItem',
+		  });
+		});
       
       var optionSets = $j('.option-set'),
           optionLinks = optionSets.find('a');
@@ -176,5 +181,18 @@
   <![endif]-->
 
 		<?php wp_footer(); ?>
+        <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-21843817-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 	</body>
 </html>
